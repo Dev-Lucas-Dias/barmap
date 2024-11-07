@@ -11,8 +11,11 @@
 <body>
     <div class="container">
         <h1>Localize Bares</h1>
-        <input type="text" id="search" placeholder="O que você está procurando?" />
-        <button onclick="searchBars()">Buscar</button>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="O que você está procurando?" />
+            <button onclick="searchBars()">Buscar</button>
+            <button onclick="clearSearch()">Limpar Busca</button> <!-- Novo botão -->
+        </div>
         
         <div class="results" id="results"></div>
     </div>

@@ -7,71 +7,114 @@
 
 /* Corpo e estrutura geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Cor clara de fundo */
+    color: #333;
 }
 
 /* Contêiner com título e campo de pesquisa */
 .container {
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 /* Título da página */
 h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #8B4513; /* Marrom, que remete a madeira e ambientes de bar */
 }
 
-/* Estilo para o campo de pesquisa */
+/* Estilo para a barra de pesquisa */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    width: 70%;
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #c27c4d; /* Marrom claro de madeira */
     border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f2e2; /* Tom claro de bege */
 }
 
-/* Botão de pesquisa */
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 12px 25px;
+    background-color: #a66e3b; /* Marrom escuro, dando um tom de madeira envelhecida */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #7a4d2b; /* Cor mais escura para o efeito de hover */
 }
 
 /* Estilo da área de resultados */
 .results {
     margin-top: 20px;
+    padding: 10px;
 }
 
 .bar {
     background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .bar:hover {
     background-color: #f9f9f9;
-    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilo para o mapa */
 #map {
     height: 500px;
-    width: 60%;
-    margin-top: 20px;
-    margin: auto;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+/* Estilo específico para o botão "Limpar Busca" */
+button:last-child {
+    background-color: #d9534f; /* Cor vermelha para o botão de limpar */
+}
+
+button:last-child:hover {
+    background-color: #c9302c; /* Cor mais escura ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+        max-width: 90%;
+    }
+
+    input[type="text"] {
+        width: 60%;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
 }
